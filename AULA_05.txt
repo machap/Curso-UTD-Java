@@ -1,0 +1,118 @@
+**EXERCIOS DE FIXAÇÃO AULA 04**
+
+//1) Imprima todos os números de 150 a 300.
+public class ImprimirNumeros {
+
+    public static void main(String[] args) {
+
+        int numero = 150;
+
+        for (int i=0; i <= 150 ;i++ ) {
+
+            System.out.print(i+150 +"\t");
+        }
+
+    }
+}
+
+------------------------------------------------------------------------------------
+
+//2) Imprima a soma de 1 até 1000.
+public class SomaNumeros {
+
+    public static void main(String[] args) {
+
+        int soma = 0;
+       
+        for (int i=1; i <= 1000 ;i++ ) {
+            //soma = soma + i;
+
+            soma += i;
+        }
+
+        System.out.println("Soma é: " +soma);
+
+    }
+}
+
+------------------------------------------------------------------------------------
+
+//3) Imprima todos os múltiplos de 3, entre 1 e 100.
+public class Multiplos3 {
+
+    public static void main(String[] args) {
+
+        for (int i=1; i <= 100 ;i++ ) {
+
+        	if(i % 3 == 0){
+
+				System.out.println(i);
+        	}
+
+            
+        }
+
+    }
+}
+
+------------------------------------------------------------------------------------
+
+//4) Imprima os primeiros números da série de Fibonacci até chegar a 100.
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int a = 0;
+        int b = 1;
+        int c;
+
+        System.out.print(a);
+        System.out.print("-" +b);
+
+        while((a+b) <= 100){
+
+        		c = b + a;
+
+            	System.out.print(" " +c);
+
+            	a = b;
+        		b = c;
+        }        
+
+    }
+}
+
+------------------------------------------------------------------------------------
+
+** CLASSE SCANNER**
+- IMPLEMENTADA APARTIR DO JAVA 5.
+- SERVE PARA FACILITAR A ENTRADA DE DADOS PELO CONSOLE.
+- PARA UTILIZAR DEVE-SE IMPORTAR ANTES NA CLASSE E EM SEGUIDA INSTANCIAR UM OBJETO SCANNER.
+
+*EX:
+
+import java.util.Scanner;
+
+public class Cadastro {
+
+	public static void main(String[] args) {
+		//cria un Scanner para obter entrada a partir da janela de comando
+		Scanner input = new Scanner(System.in);
+		
+		String nome;
+		int idade;
+				
+		System.out.println("Digite o seu nome: ");
+		nome = input.nextLine(); // armazena o primeiro número digitado pelo usuário
+		
+		System.out.println("Digite a sua idade: ");
+		idade = input.nextInt(); // armazena o primeiro número digitado pelo usuário
+		
+		System.out.println("A idade de "+nome+" é "+idade+" anos.");
+
+	}
+
+}
+
+*SWITCH/CASE*
+

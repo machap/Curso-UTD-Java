@@ -1,0 +1,131 @@
+public class Principal{
+    public static void main(String[] args) {
+
+        Conta minhaConta;
+        minhaConta = new Conta();
+        //minhaConta.numero = 1239;
+        minhaConta.setNumero(1239);
+        minhaConta.dono.nome = new String("Paulo");
+        minhaConta.dono.sobreNome = new String("Victor");
+        minhaConta.dono.cpf = new String("056.604.004-25");
+        minhaConta.saldo = 1000.0;
+
+        Conta segundaConta;
+        segundaConta = new Conta();
+        segundaConta.numero = 9876;
+        segundaConta.dono.nome = new String("Maria");
+        segundaConta.dono.sobreNome = new String("Chiquinha");
+        segundaConta.dono.cpf = new String("035.059.789-11");
+        segundaConta.saldo = 200.0;
+        
+        minhaConta.sacar(100.0);
+        
+        System.out.println("----------------------------------------------------");
+        minhaConta.depositar(1100.0);
+        
+
+        System.out.println("Conta: "+ minhaConta.getNumero() +" Nome"+ minhaConta.dono.getNome());
+        
+
+
+/*
+        System.out.println("----------------------------------------------------");
+        System.out.println("Conta: "+ minhaConta.numero +" Nome: "+ minhaConta.dono.nome +" "+ minhaConta.dono.sobreNome +" CPF "+minhaConta.dono.cpf +" Saldo: "+ minhaConta.saldo);
+        System.out.println("Conta: "+ segundaConta.numero +" Nome: "+ segundaConta.dono.nome +" "+ segundaConta.dono.sobreNome +" CPF "+segundaConta.dono.cpf +" Saldo: "+ segundaConta.saldo);
+        
+        System.out.println("----------------------------------------------------");
+
+        segundaConta.saldo += minhaConta.tranferir(9876, 800.0);
+
+        System.out.println("----------------------------------------------------");
+        System.out.println("Conta: "+ minhaConta.numero +" Nome: "+ minhaConta.dono.nome +" "+ minhaConta.dono.sobreNome +" CPF "+minhaConta.dono.cpf +" Saldo: "+ minhaConta.saldo);
+        System.out.println("Conta: "+ segundaConta.numero +" Nome: "+ segundaConta.dono.nome +" "+ segundaConta.dono.sobreNome +" CPF "+segundaConta.dono.cpf +" Saldo: "+ segundaConta.saldo);
+        System.out.println("Conta: "+ minhaConta.numero +" Nome: "+ minhaConta.dono.nome +" "+ minhaConta.dono.sobreNome +" CPF "+minhaConta.dono.cpf +" Saldo: "+ minhaConta.saldo);
+        System.out.println("Conta: "+ segundaConta.numero +" Nome: "+ segundaConta.dono.nome +" "+ segundaConta.dono.sobreNome +" CPF "+segundaConta.dono.cpf +" Saldo: "+ segundaConta.saldo);
+        System.out.println("----------------------------------------------------");
+    }
+*/
+
+}
+} 
+
+public class Conta{
+
+    private int numero;
+    private Cliente dono =  new Cliente();
+    private double saldo;
+    private double limite;
+
+    public int getNumero(){
+        return this.numero;
+    } 
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+    public double getSaldo(){
+        return this.saldo;
+    } 
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }    
+    public double getLimite(){
+        return this.limite;
+    } 
+    public void setLimite(double limite){
+        this.limite = limite;
+    }
+
+    public void sacar(double valor){
+        if(saldo >= valor){
+            this.saldo -= valor;
+            System.out.println("Saque realizado com Sucesso! ");
+            System.out.println("Novo Saldo: "+ this.saldo);
+        }else{
+            System.out.println("Saldo insuficiente");
+        }
+    }
+
+    public void depositar(double valor){
+        this.saldo += valor;
+        System.out.println("Deposito realizado com Sucesso! ");
+        System.out.println("Novo Saldo: "+ this.saldo);
+    }
+
+    public double tranferir(int conta, Double valor){
+        if(saldo >= valor){
+            this.saldo -= valor;
+            System.out.println("Tranferencia realizado com Sucesso! ");
+        }else{
+            System.out.println("Saldo insuficiente");
+        }
+
+        return valor;
+    }
+}
+
+public class Cliente{
+	
+	private String nome;
+	private String sobreNome;
+	private String cpf;
+
+	public String getNome(){
+		return this.nome;
+	}
+	public void setNome(String nome){
+		this.nome = nome;
+	}
+	public String getsobreNome(){
+		return this.sobreNome;
+	}
+	public void setSobreNome(String sobreNome){
+		this.sobreNome = sobreNome;
+	}
+	public String getCpf(){
+		return this.cpf;
+	}
+	public void setCpg(String cpf){
+		this.cpf = cpf;
+	}
+
+}

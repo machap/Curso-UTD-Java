@@ -1,0 +1,53 @@
+***CURSO DE JAVA COM BANCO DE DADOS***
+
+*COMANDOS USANDO NO TERNINAL*
+
+- JAVA -VERSION = EXIBE SE O JAVA ESTA INSTALADO E MOSTRA A VERSÃO.
+- JAVAC nomedoarquivo = PREPARA O ARQUIVO PARA EXECUÇÃO.
+- JAVA nomedoarquivo = EXECUTA O ARQUIVO.
+
+*HELLO WORLD*
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Primeiro Ola Mundo !");
+        
+        }
+    }
+
+*OPERADORES*
++ SOMA
+- SUBTRAÇÃO
+* MULTIPLICAÇÃO
+/ DIVISÃO
+% MODULO
+== ATRIBUIÇÃO
+
+*INCREMENTO E DECREMENTO*
+- PRE INCREMENTO (++X) POS INCREMENTO (X++)
+- PRE DECREMENTO (--Y) POS DESCREMENTO (Y--)
+
+public class Incremento {
+
+    public static void main(String[] args) {
+
+        int x = 5;
+        int y = 7;
+
+        ++x;
+        System.out.println("O Valor de X no pré incremento é: "+x);
+
+        x++;
+        System.out.println("O Valor de X no pós incremento é: "+x);
+        
+        --y;
+        System.out.println("O Valor de Y no pré deremento é: "+y);
+        
+        y--;
+        System.out.println("O Valor de Y no pós decremento é: "+y);
+
+        }
+        
+    }

@@ -1,0 +1,60 @@
+public class TestaCarro {
+
+	public static void main(String[] args){
+		Carro meuCarro;
+		meuCarro = new Carro();
+		meuCarro.cor = "Verde";
+		meuCarro.modelo = "Fusca";
+		meuCarro.velocidadeAtual = 25;
+		meuCarro.velocidadeMaxima = 120;
+		
+		//liga o carro
+		meuCarro.liga();
+		
+		//acelera o carro
+		meuCarro.acelera(35);
+		System.out.println("O carro está com: " +meuCarro.velocidadeAtual+" km/h");
+		
+		//Marcha do Carro
+		meuCarro.pegaMarcha();
+		System.out.println("O carro está na Marcha: " +meuCarro.pegaMarcha());
+	}
+
+}
+
+public class Carro{
+
+	String modelo, cor;
+	int marcha;
+	int velocidadeMaxima;
+	int velocidadeAtual;
+
+	public void liga(){
+		System.out.println("Ligando Carro");
+	}
+
+	public void acelera(int velocidade){
+		velocidadeAtual += velocidade;
+	}
+
+
+	public int pegaMarcha(){
+
+		if(velocidadeAtual < 0){
+			return -1;
+		}if(velocidadeAtual >= 0 && velocidadeAtual < 20){
+			return 1;
+		}if(velocidadeAtual >= 20 && velocidadeAtual < 40){
+			return 2;
+		}if(velocidadeAtual >= 40 && velocidadeAtual < 60){
+			return 3;
+		}if(velocidadeAtual >= 60 && velocidadeAtual <= 80){
+			return 4;
+		}if(velocidadeAtual > 80){
+			return 5;
+		}
+
+		return 0;
+	}
+
+}

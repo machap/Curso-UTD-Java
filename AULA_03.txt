@@ -1,0 +1,100 @@
+- VALORES LITERAIS Os valores inseridos diretamente no código fonte.
+
+*FORMATO DE ESCRITA DOS NUMEROS INTEIROS*
+- BINARIO 0B(NUMERO)
+- OCTAL 0(NUMERO)
+- DECIMAL (0-9)
+- HEXADECIMAL 0X(NUMERO)
+--------------------------------------------------------------------------------------------
+EX:
+int dia, mes, ano;
+
+//dia 14
+dia = 0b1110;
+
+//mês 06 (junho)
+mes = 0x6;
+
+//ano de 1982
+ano = 1982;
+--------------------------------------------------------------------------------------------
+1) CALCULAR A MEDIA
+
+import java.util.Scanner;
+
+public class Media {
+
+    public static void main(String[] args) {
+
+    	//Declara as variaveis do programa
+        double n1, n2, n3, n4, media;
+        String nome;
+
+        //Instancia um Objeto que captura o teclado
+        Scanner sc = new Scanner(System.in);
+
+        //Recebe os Dados do usuario pelo Teclado
+        System.out.println("Digite o Nome do Aluno: ");
+	nome = sc.next();
+	System.out.println("Digite a nota 1");
+	n1 = sc.nextDouble();
+	System.out.println("Digite a nota 2");
+	n2 = sc.nextDouble();
+	System.out.println("Digite a nota 3");
+	n3 = sc.nextDouble();
+	System.out.println("Digite a nota 4");
+	n4 = sc.nextDouble();
+
+	/*
+	VALORES LITERAIS
+	nome = "Paulo Victor"
+        n1 = 7.5f;
+        n2 = 5f;
+        n3 = 8.5f;
+        n4 = 7.3f;
+        */
+
+        //Calcula a Media
+        media = (n1+ n2 + n3 + n4) / 4;
+
+        System.out.println("Aluno " + nome +" Media " + media);
+
+        }
+    }
+
+--------------------------------------------------------------------------------------------
+2) IDADE
+
+import java.util.Scanner;
+
+public class Idade {
+
+    public static void main(String[] args) {
+
+    	//Declara as variaveis do programa
+        int dia, mes, anoNascimento;
+        String nome;
+
+        //Instancia um Objeto que captura o teclado
+        Scanner sc = new Scanner(System.in);
+
+        //Recebe os Dados do usuario pelo Teclado
+        System.out.println("Qual o seu Nome ?");
+	nome = sc.next();
+	System.out.println("Em que DIA você nasceu ?");
+	dia = sc.nextInt();
+	System.out.println("Em que MÊS vc nasceu ?");
+	mes = sc.nextInt();
+	System.out.println("Em que ANO você nasceu");
+	anoNascimento = sc.nextInt();
+	        
+        //Calcula a Idade
+        int idade = 2017 - anoNascimento;
+
+        System.out.println(nome +" nasceu em " + dia +"/"+mes+"/"+anoNascimento);
+        System.out.println("Ele está com " +idade+ " anos de idade");
+
+        }
+    }
+
+--------------------------------------------------------------------------------------------

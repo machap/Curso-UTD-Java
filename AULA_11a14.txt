@@ -1,0 +1,119 @@
+**  CONSTRUTOR  **
+
+- O construtor da classe é um bloco declarado com o mesmo nome que a classe.
+- Quando usamos a palavra chave new, estamos construindo um objeto. Sempre quando o new é chamado, 
+ele executa o construtor da classe.
+- Um construtor pode receber um argumento, podendo assim inicializar algum tipo de informação.
+
+**  HERANÇA  **
+
+- Adiciona a capacidade de uma classe filha estender/herdar atributos e métodos de uma classe mãe.
+- UMA CLASSE PODE TER VÁRIAS FILHAS, MAS PODE TER APENAS UMA MÃE, É A CHAMADA HERANÇA SIMPLES DO JAVA.
+
+**  SOBRECARGA **
+
+- No Java, quando herdamos um método, podemos alterar seu comportamento. Podemos reescrever (reescrever,
+sobrescrever, override) este método.
+
+---------------------------------------------------------------------------------------------------------------
+package br.com.testes;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		/* Instanciando os Objeto com passagem de argumentos no construtor.
+		 * Chamada do metodo exibir, para mostra a saida no console.
+		 */
+		Pessoa pessoa = new Pessoa("Paulo", 23);
+		pessoa.exibir();
+		
+		Funcionario funcionario = new Funcionario("Joao", 20, "12345");
+		funcionario.exibir();
+
+
+	}
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+package br.com.testes;
+
+public class Pessoa {
+
+	private String nome;
+	private int idade;
+
+	/*
+	 *  Declaração do contrutor vazio. 
+	 *  Por padrão o java já implementa se nao existir nenhum.
+	 */
+	public Pessoa() {
+
+	}
+	//Declaração do contrutor com argumentos. Força o desenvolvedor na hora da criação.
+	public Pessoa(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}	
+	//Metodo para mostrar a saida no console
+	public void exibir() {
+		System.out.println("Nome: "+ this.nome);
+		System.out.println("Idade: "+ this.idade);
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return this.idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+}
+
+---------------------------------------------------------------------------------------------------------------
+package br.com.testes;
+
+public class Funcionario extends Pessoa {
+
+	private String matricula;
+
+	/*
+	 *  Declaração do contrutor vazio. 
+	 *  Por padrão o java já implementa se nao existir nenhum.
+	 */
+	public Funcionario() {
+
+	}
+
+	/*
+	 * Criação do construtor com argumentos. Usando a sobrecarga de construtores. O
+	 * SUPER chama o contrutor da classe mãe e já passa os argumentos. E atribui o
+	 * valor a matricula.
+	 */
+	public Funcionario(String nome, int idade, String matricula) {
+		super(nome, idade);
+		this.matricula = matricula;
+	}
+
+	/*
+	 * Reescreve o metodo exibir da classe mãe.
+	 * Adiciona a saida matricula ao metodo.
+	 */
+	@Override
+	public void exibir() {
+		super.exibir();
+		System.out.println("Matricula: " + this.matricula);
+	}
+
+}

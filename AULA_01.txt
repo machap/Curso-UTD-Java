@@ -1,0 +1,14 @@
+***CURSO DE JAVA COM BANCO DE DADOS***
+
+- DISCO RÍGIDO = Possui a principal função de armazenar dados. Também chamados de HDs ou Winchester, o seu conteúdo é persistente, ou seja, não é descartado quando desligado.
+- MEMÓRIA RAM = Possui a principal função de armazenar dados, porém o acesso e o armazenamento é bem mais rápidos do que nos HDs.
+
+*UNIDADE CENTRAL DE PROCESSAMENTO - CPU*
+- Responsável em executar as operações lógicas e aritméticas. Ela é composta pela Unidade de Controle (UC), Unidade Lógica (ULA) e por Registradores.
+- A UC copia uma operação de um programa armazenado na memória RAM e guarda os dados nos Registradores.
+- A ULA executa a operação acessando os dados armazenados no Registradores onde também guarda os guardas.
+
+- Java é uma linguagem de programação desenvolvida pela SUN (Hoje pertencente a Oracle) com o objetivo de manter o poder
+computacional de C++, agregando características de segurança, robusteza e portabilidade.
+ 
+- A linguagem é orientada a objetos, fortemente tipada, independente de arquitetura, robusta, segura, portável, bem estruturada, suporta programação distribuída, multithreaded e conta com garbage collection.
